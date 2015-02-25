@@ -1,0 +1,1 @@
+ root -b -x $ROOTSYS/tutorials/roostats/StandardHistFactoryPlotsWithCategories.C\(\"../workspaces/current/output_unblinded_tes_mfs_sym/xml_measurement_hh_combination_125_results/hist2workspace_combined_measurement_hh_combination_125_model.root\"\)

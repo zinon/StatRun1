@@ -1,0 +1,311 @@
+#!/bin/bash
+
+function getNParray(){
+
+local current_output_unblinded_combination=(
+SigXsecOverSM
+ATLAS_norm_HH_2012_QCD
+ATLAS_norm_HH_2012_Ztt
+alpha_ATLAS_ANA_EMB_ISOL
+alpha_ATLAS_ANA_EMB_MFS
+alpha_ATLAS_ANA_HH_2012_QCD
+alpha_ATLAS_BR_tautau
+alpha_ATLAS_JER_2012
+alpha_ATLAS_JES_2012_Detector1
+alpha_ATLAS_JES_2012_Eta_StatMethod
+alpha_ATLAS_JES_2012_Modelling1
+alpha_ATLAS_JES_2012_PileRho_TAU_GG
+alpha_ATLAS_JES_2012_PileRho_TAU_QQ
+alpha_ATLAS_JES_Eta_Modelling
+alpha_ATLAS_JES_FlavComp_TAU_G
+alpha_ATLAS_JES_FlavComp_TAU_Q
+alpha_ATLAS_JES_FlavResp
+alpha_ATLAS_JVF_2012
+alpha_ATLAS_LUMI_2012
+alpha_ATLAS_MET_RESOSOFT
+alpha_ATLAS_MET_SCALESOFT
+alpha_ATLAS_TAU_ID_2012
+alpha_ATLAS_TAU_JFAKE_2012
+alpha_ATLAS_TES_FAKE_2012
+alpha_ATLAS_TES_TRUE_2012
+alpha_ATLAS_TRIGGER_EMB_HH_2012
+alpha_ATLAS_TRIGGER_HH_2012
+alpha_ATLAS_UE_gg
+alpha_ATLAS_UE_qq
+alpha_Gen_Qmass_ggH
+alpha_QCDscale_V
+alpha_QCDscale_VH
+alpha_QCDscale_ggH1in
+alpha_QCDscale_ggH2in
+alpha_QCDscale_ggH3in
+alpha_QCDscale_qqH
+alpha_pdf_Higgs_gg
+alpha_pdf_Higgs_qq
+alpha_pdf_qq
+)
+local current_output_unblinded_boosted=(
+SigXsecOverSM
+ATLAS_norm_HH_2012_QCD
+ATLAS_norm_HH_2012_Ztt
+alpha_ATLAS_ANA_EMB_ISOL
+alpha_ATLAS_ANA_EMB_MFS
+alpha_ATLAS_ANA_HH_2012_QCD
+alpha_ATLAS_BR_tautau
+alpha_ATLAS_JER_2012
+alpha_ATLAS_JES_2012_Detector1
+alpha_ATLAS_JES_2012_Eta_StatMethod
+alpha_ATLAS_JES_2012_Modelling1
+alpha_ATLAS_JES_2012_PileRho_TAU_GG
+alpha_ATLAS_JES_2012_PileRho_TAU_QQ
+alpha_ATLAS_JES_Eta_Modelling
+alpha_ATLAS_JES_FlavComp_TAU_G
+alpha_ATLAS_JES_FlavComp_TAU_Q
+alpha_ATLAS_JES_FlavResp
+alpha_ATLAS_JVF_2012
+alpha_ATLAS_LUMI_2012
+alpha_ATLAS_MET_RESOSOFT
+alpha_ATLAS_MET_SCALESOFT
+alpha_ATLAS_TAU_ID_2012
+alpha_ATLAS_TAU_JFAKE_2012
+alpha_ATLAS_TES_FAKE_2012
+alpha_ATLAS_TES_TRUE_2012
+alpha_ATLAS_TRIGGER_EMB_HH_2012
+alpha_ATLAS_TRIGGER_HH_2012
+alpha_Gen_Qmass_ggH
+alpha_QCDscale_V
+alpha_QCDscale_VH
+alpha_QCDscale_ggH1in
+alpha_QCDscale_ggH2in
+alpha_QCDscale_qqH
+alpha_pdf_Higgs_gg
+alpha_pdf_Higgs_qq
+alpha_pdf_qq
+)
+local current_output_unblinded_vbf=(
+SigXsecOverSM
+ATLAS_norm_HH_2012_QCD
+ATLAS_norm_HH_2012_Ztt
+alpha_ATLAS_ANA_EMB_ISOL
+alpha_ATLAS_ANA_EMB_MFS
+alpha_ATLAS_ANA_HH_2012_QCD
+alpha_ATLAS_BR_tautau
+alpha_ATLAS_JER_2012
+alpha_ATLAS_JES_2012_Detector1
+alpha_ATLAS_JES_2012_Eta_StatMethod
+alpha_ATLAS_JES_2012_Modelling1
+alpha_ATLAS_JES_2012_PileRho_TAU_GG
+alpha_ATLAS_JES_2012_PileRho_TAU_QQ
+alpha_ATLAS_JES_Eta_Modelling
+alpha_ATLAS_JES_FlavComp_TAU_G
+alpha_ATLAS_JES_FlavComp_TAU_Q
+alpha_ATLAS_JES_FlavResp
+alpha_ATLAS_JVF_2012
+alpha_ATLAS_LUMI_2012
+alpha_ATLAS_MET_SCALESOFT
+alpha_ATLAS_TAU_ID_2012
+alpha_ATLAS_TAU_JFAKE_2012
+alpha_ATLAS_TES_FAKE_2012
+alpha_ATLAS_TES_TRUE_2012
+alpha_ATLAS_TRIGGER_EMB_HH_2012
+alpha_ATLAS_TRIGGER_HH_2012
+alpha_ATLAS_UE_gg
+alpha_ATLAS_UE_qq
+alpha_Gen_Qmass_ggH
+alpha_QCDscale_V
+alpha_QCDscale_VH
+alpha_QCDscale_ggH2in
+alpha_QCDscale_ggH3in
+alpha_QCDscale_qqH
+alpha_pdf_Higgs_gg
+alpha_pdf_Higgs_qq
+alpha_pdf_qq
+)
+
+    local swagato_unblinded_random_mu_combination=(
+        SigXsecOverSM
+        ATLAS_norm_HH_2012_QCD
+        ATLAS_norm_HH_2012_Ztt
+        alpha_ATLAS_ANA_EMB_ISOL
+        alpha_ATLAS_ANA_EMB_MFS
+        alpha_ATLAS_ANA_HH_2012_QCD_0J
+        alpha_ATLAS_ANA_HH_2012_QCD_1JBV
+        alpha_ATLAS_BR_tautau
+        alpha_ATLAS_JER_2012
+        alpha_ATLAS_JES_2012_Detector1
+        alpha_ATLAS_JES_2012_Eta_StatMethod
+        alpha_ATLAS_JES_2012_Modelling1
+        alpha_ATLAS_JES_2012_PileRho_TAU_GG
+        alpha_ATLAS_JES_2012_PileRho_TAU_QG
+        alpha_ATLAS_JES_2012_PileRho_TAU_QQ
+        alpha_ATLAS_JES_Eta_Modelling
+        alpha_ATLAS_JES_FlavComp_TAU_G
+        alpha_ATLAS_JES_FlavComp_TAU_Q
+        alpha_ATLAS_JES_FlavResp
+        alpha_ATLAS_JVF_2012
+        alpha_ATLAS_LUMI_2012
+        alpha_ATLAS_TAU_ID_2012
+        alpha_ATLAS_TAU_JFAKE_2012
+        alpha_ATLAS_TES_FAKE_2012
+        alpha_ATLAS_TES_TRUE_2012
+        alpha_ATLAS_TRIGGER_2012
+        alpha_ATLAS_UE_gg
+        alpha_ATLAS_UE_qq
+        alpha_Gen_Qmass_ggH
+        alpha_QCDscale_V
+        alpha_QCDscale_VH
+        alpha_QCDscale_ggH1in
+        alpha_QCDscale_ggH2in
+        alpha_QCDscale_qqH
+        alpha_pdf_Higgs_gg
+        alpha_pdf_Higgs_qq
+        alpha_pdf_qq
+    )
+
+    local hh_bdt_deta_rest_workspace_fixed_combination=(
+        ATLAS_norm_HH_2012_QCD
+        ATLAS_norm_HH_2012_Ztt
+        alpha_ATLAS_ANA_EMB_ISOL
+        alpha_ATLAS_ANA_EMB_MFS
+        alpha_ATLAS_ANA_HH_2012_QCD
+        alpha_ATLAS_BR_tautau
+        alpha_ATLAS_JER_2012
+        alpha_ATLAS_JES_2012_Detector1
+        alpha_ATLAS_JES_2012_Eta_StatMethod
+        alpha_ATLAS_JES_2012_Modelling1
+        alpha_ATLAS_JES_2012_PileRho_TAU_GG
+        alpha_ATLAS_JES_2012_PileRho_TAU_QQ
+        alpha_ATLAS_JES_Eta_Modelling
+        alpha_ATLAS_JES_FlavComp_TAU_G
+        alpha_ATLAS_JES_FlavComp_TAU_Q
+        alpha_ATLAS_JES_FlavResp
+        alpha_ATLAS_JVF_2012
+        alpha_ATLAS_LUMI_2012
+        alpha_ATLAS_MET_RESOSOFT
+        alpha_ATLAS_MET_SCALESOFT
+        alpha_ATLAS_TAU_ID_2012
+        alpha_ATLAS_TAU_JFAKE_2012
+        alpha_ATLAS_TES_FAKE_2012
+        alpha_ATLAS_TES_TRUE_2012
+        alpha_ATLAS_TRIGGER_HH_2012
+        alpha_ATLAS_UE_gg
+        alpha_ATLAS_UE_qq
+        alpha_Gen_Qmass_ggH
+        alpha_QCDscale_V
+        alpha_QCDscale_VH
+        alpha_QCDscale_ggH1in
+        alpha_QCDscale_ggH2in
+        alpha_QCDscale_ggH3in
+        alpha_QCDscale_qqH
+        alpha_pdf_Higgs_gg
+        alpha_pdf_Higgs_qq
+        alpha_pdf_qq
+    )
+    hh_bdt_deta_rest_workspace_fixed_vbf=(
+        ATLAS_norm_HH_2012_QCD
+        ATLAS_norm_HH_2012_Ztt
+        alpha_ATLAS_ANA_EMB_ISOL
+        alpha_ATLAS_ANA_EMB_MFS
+        alpha_ATLAS_ANA_HH_2012_QCD
+        alpha_ATLAS_BR_tautau
+        alpha_ATLAS_JER_2012
+        alpha_ATLAS_JES_2012_Detector1
+        alpha_ATLAS_JES_2012_Eta_StatMethod
+        alpha_ATLAS_JES_2012_Modelling1
+        alpha_ATLAS_JES_2012_PileRho_TAU_GG
+        alpha_ATLAS_JES_2012_PileRho_TAU_QQ
+        alpha_ATLAS_JES_Eta_Modelling
+        alpha_ATLAS_JES_FlavComp_TAU_G
+        alpha_ATLAS_JES_FlavComp_TAU_Q
+        alpha_ATLAS_JES_FlavResp
+        alpha_ATLAS_JVF_2012
+        alpha_ATLAS_LUMI_2012
+        alpha_ATLAS_MET_RESOSOFT
+        alpha_ATLAS_MET_SCALESOFT
+        alpha_ATLAS_TAU_ID_2012
+        alpha_ATLAS_TAU_JFAKE_2012
+        alpha_ATLAS_TES_FAKE_2012
+        alpha_ATLAS_TES_TRUE_2012
+        alpha_ATLAS_TRIGGER_HH_2012
+        alpha_ATLAS_UE_gg
+        alpha_ATLAS_UE_qq
+        alpha_Gen_Qmass_ggH
+        alpha_QCDscale_V
+        alpha_QCDscale_VH
+        alpha_QCDscale_ggH1in
+        alpha_QCDscale_ggH2in
+        alpha_QCDscale_ggH3in
+        alpha_QCDscale_qqH
+        alpha_pdf_Higgs_gg
+        alpha_pdf_Higgs_qq
+        alpha_pdf_qq
+    )
+    hh_bdt_deta_rest_workspace_fixed_boosted=(
+        ATLAS_norm_HH_2012_QCD
+        ATLAS_norm_HH_2012_Ztt
+        alpha_ATLAS_ANA_EMB_ISOL
+        alpha_ATLAS_ANA_EMB_MFS
+        alpha_ATLAS_ANA_HH_2012_QCD
+        alpha_ATLAS_BR_tautau
+        alpha_ATLAS_JER_2012
+        alpha_ATLAS_JES_2012_Detector1
+        alpha_ATLAS_JES_2012_Eta_StatMethod
+        alpha_ATLAS_JES_2012_Modelling1
+        alpha_ATLAS_JES_2012_PileRho_TAU_GG
+        alpha_ATLAS_JES_2012_PileRho_TAU_QQ
+        alpha_ATLAS_JES_Eta_Modelling
+        alpha_ATLAS_JES_FlavComp_TAU_G
+        alpha_ATLAS_JES_FlavComp_TAU_Q
+        alpha_ATLAS_JES_FlavResp
+        alpha_ATLAS_JVF_2012
+        alpha_ATLAS_LUMI_2012
+        alpha_ATLAS_MET_RESOSOFT
+        alpha_ATLAS_MET_SCALESOFT
+        alpha_ATLAS_TAU_ID_2012
+        alpha_ATLAS_TAU_JFAKE_2012
+        alpha_ATLAS_TES_FAKE_2012
+        alpha_ATLAS_TES_TRUE_2012
+        alpha_ATLAS_TRIGGER_HH_2012
+        alpha_Gen_Qmass_ggH
+        alpha_QCDscale_V
+        alpha_QCDscale_VH
+        alpha_QCDscale_ggH1in
+        alpha_QCDscale_ggH2in
+        alpha_QCDscale_qqH
+        alpha_pdf_Higgs_gg
+        alpha_pdf_Higgs_qq
+        alpha_pdf_qq
+    )
+
+
+    xcase=${1}_${2}_${3}
+
+    echo $xcase
+
+    case "$xcase" in
+		current_output_unblinded_combination)
+            rtr=(${current_output_unblinded_combination[@]})
+            ;;
+		current_output_unblinded_vbf)
+            rtr=(${current_output_unblinded_vbf[@]})
+            ;;
+		current_output_unblinded_boosted)
+            rtr=(${current_output_unblinded_boosted[@]})
+            ;;
+        swagato_unblinded_random_mu_combination)
+            rtr=(${swagato_unblinded_random_mu_combination[@]})current_output_unblinded_combination
+            ;;
+        hh_bdt_deta_rest_workspace_fixed_combination)
+            rtr=(${hh_bdt_deta_rest_workspace_fixed_combination[@]})
+            ;;
+       hh_bdt_deta_rest_workspace_fixed_vbf)
+            rtr=(${hh_bdt_deta_rest_workspace_fixed_vbf[@]})
+            ;;
+        hh_bdt_deta_rest_workspace_fixed_boosted)
+            rtr=(${hh_bdt_deta_rest_workspace_fixed_boosted[@]})
+            ;;
+        *)
+            echo NuisParamRepo : unknown workspace '$xcase'
+            rtr=()
+    esac
+}
+
